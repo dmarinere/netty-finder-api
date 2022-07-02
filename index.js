@@ -9,8 +9,9 @@ app.get('/api/:number', (req, res) => {
     console.log(req.query)
     let number = new Network(req.params.number);
     const network = number.getNetworkName();
+    console.log(number);
     if (network !== null) {
-        res.send( `${number} belong to  the ${network} network`);
+        res.send( `${req.params.number} belong to  the ${network} network`);
     }
     else {
         res.send("The number you just sent does not belong to any network");   
