@@ -1,11 +1,12 @@
 const app = require('express')();
-const Network = require('netty_finder')
+const Network = require('netty_finder');
 
 
 
 
 
-app.post('/api/:number', (req, res) => {
+app.get('/api/:number', (req, res) => {
+    console.log(req.query)
     let number = new Network(req.params.number);
     const network = number.getNetworkName();
     if (network !== null) {
