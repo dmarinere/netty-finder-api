@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "3cf96718-80b2-4e26-910d-d1204a60002a",
+		"name": "Netty API",
+		"description": "Enter description about your API here\n\nContact Support:\n Name: Your name",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/user/:userId",
+			"id": "3159128a-4bff-42e2-b5b0-e40b7b0c4051",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/user/:userId",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						":userId"
+					],
+					"variable": [
+						{
+							"id": "9b7aaba5-6e9c-4d1f-a093-48db157eec42",
+							"key": "userId",
+							"value": "-1310610",
+							"description": "(Required) ID of the user"
+						}
+					]
+				},
+				"description": "Sample endpoint: Returns details about a particular user"
+			},
+			"response": [
+				{
+					"id": "a36e46f4-ef86-49a3-9968-e52f06518ef8",
+					"name": "Sample response: Details about a user by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/user/:userId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "-1310610",
+									"description": "(Required) ID of the user"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "[\n  {\n    \"name\": \"pariatur dolor dolore ipsum\",\n    \"id\": 81646159,\n    \"tag\": \"fugiat dolor adipisicing\"\n  },\n  {\n    \"name\": \"eu do commodo\",\n    \"id\": -78850520,\n    \"tag\": \"ut nulla exercitation\"\n  }\n]"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "<Basic Auth Username>",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "<Basic Auth Password>",
+				"type": "string"
+			}
+		]
+	},
+	"variable": [
+		{
+			"id": "c2b10f53-457a-4512-97b7-90132878cbf9",
+			"key": "baseUrl",
+			"value": "http://localhost:3000/api",
+			"type": "string"
+		}
+	]
+}

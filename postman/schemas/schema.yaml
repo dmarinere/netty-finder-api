@@ -1,0 +1,42 @@
+info:
+    version: "1.0.0"
+    title: "Netty API"
+    description: Enter description about your API here
+    contact:
+        name: Osuolale Emmanuel
+host: "netty-api.herokuapp.com"
+basePath: /api
+schemes:
+    - http
+consumes:
+    - application/json
+produces:
+    - application/json
+paths:
+    /api/{phone_number}:
+        post:
+            description: "Sample endpoint: Returns network that a phone number belongs to"
+            produces:
+                - application/json
+            parameters:
+                - in: path
+                  name: phone_number
+                  type: integer
+                  required: true
+                  description: Phone number to check
+            responses:
+                "200":
+                    description: "Sample response: Details about a user by ID"
+                    schema:
+                        type: array
+                        items:
+                            $ref: "#/definitions/User"
+definitions:
+    phone_number:
+        type: object
+        required:
+            - name
+        properties:
+            id:
+                type: integer
+                format: int64
