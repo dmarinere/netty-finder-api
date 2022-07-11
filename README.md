@@ -4,23 +4,12 @@ This is an API verison of the original [netty-finder](https://github.com/BolajiA
 
 
 # Usage
-
-```js
-
-const Network = require('netty_finder')
-
-let detector = new Network("08155737518"),
-network = detector.getNetworkName()
-
-console.log(network)
-
-$>> 9mobile
-
-```
+Visit `https://netty-api.herokuapp.com/api/` + phone_number using a web browser or Postman. 
+It would return the network it belongs to in a JSON format which is also viewable in your browser.
 
 # About Author
 
-This was originally built by [Bolaji Ayodeji](https://github.com/BolajiAyodeji) so all rights goes to him, I only interpreted the javascript code to es6 and package to npm
+This was originally built by [Bolaji Ayodeji](https://github.com/BolajiAyodeji) so all rights goes to him, I only converted it to an api and deployed it on heroku
 
 # Contribution
  
